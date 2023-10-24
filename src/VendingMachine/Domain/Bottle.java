@@ -4,7 +4,7 @@ public class Bottle extends Product {
 
     private double bottleVolume;
 
-    public Bottle(String name, double price,double bottleVolume) {
+    public Bottle(String name, double price, double bottleVolume) {
         super(name, price, new PrType("bottle"));
         this.bottleVolume = bottleVolume;
     }
