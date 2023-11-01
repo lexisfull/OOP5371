@@ -6,12 +6,19 @@ import VendingMachine.Domain.PrType;
 import VendingMachine.Domain.Product;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public abstract class Shop {
+public  abstract class Shop implements Iterable<Product>{
+    private static List<Product> products;
 
+    public Iterator<Product> iterator(){
+        return new IteratorProduct(products);
+    }
 
-    public static Order addOrder(String name){
+    public static List<Product> buildShopWithProducts(){
+
+        products = new ArrayList<>();
         PrType prType = new PrType("Snack");
         Product product1 = new Product("Snikers", 33.45, prType) ;
         Product product2 = new Product("Nuts", 10.15, prType) ;
@@ -21,7 +28,7 @@ public abstract class Shop {
         HotDrink hotDrink2 = new HotDrink("Italiano",110, 80);
 //        System.out.println(product);
 
-        List<Product> products = new ArrayList<Product>();
+
         products.add(product1);
         products.add(product2);
         products.add(product3);
@@ -29,6 +36,18 @@ public abstract class Shop {
         products.add(hotDrink);
         products.add(hotDrink2);
 
+
+
+        return  products;
+    }
+
+    public static List<Product> getProducts(){
+        return products;
+    }
+
+
+    public static Order addOrder(String name){
+        Shop.buildShopWithProducts();
         String nameOrder = name;
         for (Product product: products) {
             if(product.getName().equals(nameOrder)){
