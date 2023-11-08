@@ -11,6 +11,11 @@ public class Product implements Comparable<Product>{
         setPrice(price);
     }
 
+    public Product(String name) {
+        this.name = name;
+    }
+
+
     public String getName() {
         return name;
     }
@@ -38,8 +43,12 @@ public class Product implements Comparable<Product>{
 
     @Override
     public String toString() {
-        return ("Product: price = " + this.price + "; type = " + this.type.getName() + "; name = " + this.name);
+        if(this.price != 0 && this.type != null) {
+            return ("\nProduct: price = " + this.price + "; type = " + this.type.getName() + "; name = " + this.name);
+        }
+        return ("\nProduct: name = " + this.name);
     }
+
 
     @Override
     public int compareTo(Product o) {

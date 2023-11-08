@@ -59,4 +59,9 @@ public  abstract class Shop implements Iterable<Product>{
         }
         return null;
     }
+
+    @Override
+    public String toString() {
+        return "Shop{}" + products;
+    }
 }

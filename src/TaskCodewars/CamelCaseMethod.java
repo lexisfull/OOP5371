@@ -2,7 +2,7 @@ package TaskCodewars;
 
 public class CamelCaseMethod {
     public static void main(String[] args) {
-        System.out.println(camelCase(""));
+        System.out.println(camelCase("Ghjhbvd hdcasb jdscJ"));
     }
     public static String camelCase(String str) {
         // your code here

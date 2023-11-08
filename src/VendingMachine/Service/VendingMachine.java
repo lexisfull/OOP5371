@@ -9,11 +9,13 @@ public class VendingMachine {
     private CoinDispancer coinDispancer;
     private List<Product> products;
 
-    public VendingMachine(Holder holder, CoinDispancer coinDispancer, List<Product> products) {
+    public VendingMachine(List<Product> products) {
         this.holder = holder;
         this.coinDispancer = coinDispancer;
         this.products = products;
     }
+
+
 
     public Product byProduct(int index){
         return this.products.get(index);
@@ -23,5 +25,16 @@ public class VendingMachine {
     }
     public List<Product> getProductList(){
         return this.products;
+    }
+
+    public void add(VendingMachine vendingMachines) {
+        vendingMachines.add(vendingMachines);
+    }
+
+    @Override
+    public String toString() {
+        return "VendingMachine\n{" +
+                ", products = " + products.size() + " " + products +
+                '}' + "\n" + "--------------" + "\n";
     }
 }

@@ -50,7 +50,7 @@ public class Market implements QueueBehaviour, MarketBehaviour{
     @Override
     public void giveOrders() {
         actorQueue.peek().isSetOrder();
-        System.out.println(actorQueue.peek().getName() + " сделал заказ");
+        System.out.println(actorQueue.peek().getName() + " забрал заказ");
     }
 
 //Выход из очереди
