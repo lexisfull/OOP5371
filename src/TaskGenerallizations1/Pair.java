@@ -13,7 +13,7 @@ public class Pair<T> {
     private T first;
     private T second;
 //    Creating array
-    ArrayList<Pair<?>> list;
+    private ArrayList<Pair<?>> list;
 
     public Pair(T first, T second) {
         this.first = first;
