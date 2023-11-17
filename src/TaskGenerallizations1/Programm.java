@@ -39,7 +39,7 @@ public class Programm {
         System.out.println();
         Pair<Number> pair1 = new Pair<>(1,2);
         Pair<String> pair2 = new Pair<>("Hello!", "Great!");
-        Pair<Integer> pair3 = new Pair<>(3, 4);
+        Pair<Character> pair3 = new Pair<>('+', '?');
         ArrayList<Pair<?>> list = new ArrayList<>();
         list.add(pair1);
         list.add(pair2);
