@@ -22,6 +22,7 @@ public class Stream implements Iterable<VendingMachine>{
         this.vendingMachines.add(vendingMachine);
     }
 
+
     public List<VendingMachine> setVendingMachines(){
         return vendingMachines;
     }

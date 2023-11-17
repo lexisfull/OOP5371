@@ -34,7 +34,7 @@ public class VendingMachine {
     @Override
     public String toString() {
         return "VendingMachine\n{" +
-                ", products = " + products.size() + " " + products +
+                "products = " + products.size() + " " + products +
                 '}' + "\n" + "--------------" + "\n";
     }
 }
