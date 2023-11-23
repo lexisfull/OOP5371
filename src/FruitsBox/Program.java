@@ -59,8 +59,6 @@ public class Program {
         stream.addFruitBox(appleFruitBox);
         stream.addFruitBox(bananaFruitBox);
         CompareService.sortFruitsBox(stream.setBoxArrayList());
-
-        Exchange exchange = new Exchange();
-        exchange.exchangeFruit(appleFruitBox, appleFruitBox2);
+        
     }
 }
