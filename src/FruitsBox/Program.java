@@ -52,13 +52,15 @@ public class Program {
         orangeFruitBox.addFruit(new Orange(1.5f));
         orangeFruitBox.addFruit(new Orange(2));
         System.out.println(appleFruitBox.getWeight());
+        System.out.println(appleFruitBox2.getWeight());
         System.out.println(bananaFruitBox.getWeight());
         System.out.println(orangeFruitBox.getWeight());
 
         stream.addFruitBox(orangeFruitBox);
         stream.addFruitBox(appleFruitBox);
+        stream.addFruitBox(appleFruitBox2);
         stream.addFruitBox(bananaFruitBox);
         CompareService.sortFruitsBox(stream.setBoxArrayList());
-        
+
     }
 }
