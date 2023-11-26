@@ -16,6 +16,9 @@ public class PromptNum implements IpromptNum{
         } else if (scanner.hasNextInt()) {
             temp = scanner.nextInt();
             num = temp;
+        } else if (!scanner.hasNextDouble() && !scanner.hasNextInt()) {
+            System.out.println("Это не число, попробуйте еще раз");
+            num = getNum();
         }
         return num;
     }
