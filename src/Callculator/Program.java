@@ -15,7 +15,7 @@ import java.util.logging.SimpleFormatter;
 public class Program {
     public static void main(String[] args) throws IOException {
         Logger logger = Logger.getLogger(Program.class.getName());
-        FileHandler fh = new FileHandler("/home/lexisfull/IdeaProjects/OOP5371/src/Callculator/log");
+        FileHandler fh = new FileHandler("log");
         logger.addHandler(fh);
         SimpleFormatter simpleFormatter = new SimpleFormatter();
         fh.setFormatter(simpleFormatter);
