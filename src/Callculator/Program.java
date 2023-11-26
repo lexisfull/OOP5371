@@ -20,8 +20,10 @@ public class Program {
         SimpleFormatter simpleFormatter = new SimpleFormatter();
         fh.setFormatter(simpleFormatter);
         logger.info("Start program");
+
         Controller controller = new Controller();
         controller.getResult();
+        
         logger.log(Level.INFO, "Stop program");
     }
 }
